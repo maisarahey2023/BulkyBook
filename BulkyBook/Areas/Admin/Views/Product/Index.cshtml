@@ -1,0 +1,118 @@
+﻿
+@*@model IEnumerable<Product>
+@{
+    ViewData["Title"] = "Index";
+    }
+
+*@
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Product List</h2>
+		</div>
+        <div class="col-6 text-end">
+            <a asp-controller="Product" asp-action="Upsert" class="btn btn-primary">
+                <i class="bi bi-plus-circle"></i> &nbsp; Create New Product
+			</a>
+		</div>
+	</div>
+    <br /><br />
+    </div>
+
+<table id="tblData" class="table table-bordered table-striped" style="width:100%">
+    <thead>
+        <tr>
+            <th>
+                Title
+			</th>
+            @*<th>
+                Description
+			</th>*@
+            <th>
+                ISBN
+            </th>
+            <th>
+                Author
+			</th>
+            @*<th>
+                ListPrice
+			</th>*@
+            <th>
+                Price
+			</th>
+            @*<th>
+                Price50
+            </th>
+            <th>
+                Price100
+            </th>
+            <th>
+                ImgUrl
+            </th>*@
+            <th>
+                Category
+            </th>
+            <th>
+                Cover Type
+            </th>
+            <th></th>
+            
+           @* <th>Edit</th>
+            <th>Delete</th>*@
+		</tr>
+	</thead>
+    @*<tbody>
+        @foreach(var obj in Model)
+        {
+            <tr>
+                <td width="30%">
+                    @obj.Title
+				</td>
+                <td width="30%">
+                    @obj.Description
+				</td>
+                <td width="30%">
+                    @obj.ISBN
+				</td>
+                <td width="30%">
+                    @obj.Author
+				</td>
+                <td width="30%">
+                    @obj.ListPrice
+				</td>
+                <td width="30%">
+                    @obj.Price
+				</td>
+                <td width="30%">
+                    @obj.Price50
+				</td>
+                <td width="30%">
+                    @obj.Price100
+				</td>
+                <td width="30%">
+                    @obj.ImgUrl
+                </td>
+                <td width="30%">
+                    @obj.CoverTypeId
+                </td>
+                <td width="30%">
+                    @obj.CategoryId
+                </td>
+                <td width="20%">
+                    <a asp-controller="Product" asp-action="Edit" asp-route-id="@obj.Id" class="btn btn-primary">
+                        <i class="bi bi-pencil-square"></i> &nbsp; Edit Product
+                    </a>
+                </td>
+                <td width="20%">
+                    <a asp-controller="Product" asp-action="Delete" asp-route-id="@obj.Id" class="btn btn-primary">
+                        <i class="bi bi-trash-fill"></i>&nbsp; Delete Product
+                    </a>
+                </td>
+			</tr>
+        }
+    </tbody>*@
+
+</table>
+@section Scripts{
+    <script src="~/js/product.js"></script>
+}
